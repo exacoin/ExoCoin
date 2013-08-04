@@ -1,4 +1,4 @@
-// Copyright (c) 2013 FehCoin Developers
+// Copyright (c) 2013 ExoCoin Developers
 
 #include <string.h>
 #include "pbkdf2.h"

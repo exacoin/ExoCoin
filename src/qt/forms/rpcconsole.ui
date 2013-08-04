@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>FehCoin - Debug window</string>
+   <string>ExoCoin - Debug window</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -36,7 +36,7 @@
           </font>
          </property>
          <property name="text">
-          <string>FehCoin Core</string>
+          <string>ExoCoin Core</string>
          </property>
         </widget>
        </item>
@@ -322,7 +322,7 @@
        <item row="15" column="0">
         <widget class="QPushButton" name="openDebugLogfileButton">
          <property name="toolTip">
-          <string>Open the FehCoin debug log file from the current data directory. This can take a few seconds for large log files.</string>
+          <string>Open the ExoCoin debug log file from the current data directory. This can take a few seconds for large log files.</string>
          </property>
          <property name="text">
           <string>&amp;Open</string>
@@ -348,7 +348,7 @@
        <item row="17" column="0">
         <widget class="QPushButton" name="showCLOptionsButton">
          <property name="toolTip">
-          <string>Show the FehCoin-Qt help message to get a list with possible FehCoin command-line options.</string>
+          <string>Show the ExoCoin-Qt help message to get a list with possible ExoCoin command-line options.</string>
          </property>
          <property name="text">
           <string>&amp;Show</string>

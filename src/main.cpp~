@@ -33,7 +33,7 @@ unsigned int nTransactionsUpdated = 0;
 map<uint256, CBlockIndex*> mapBlockIndex;
 set<pair<COutPoint, unsigned int> > setStakeSeen;
 uint256 hashGenesisBlock = hashGenesisBlockOfficial;
-static CBigNum bnProofOfWorkLimit(~uint256(0) >> 25);
+static CBigNum bnProofOfWorkLimit(~uint256(0) >> 30);
 static CBigNum bnProofOfStakeLimit(~uint256(0) >> 24);
 static CBigNum bnProofOfStakeHardLimit(~uint256(0) >> 30); // disabled temporarily, will be used in the future to fix minimum PoS difficulty at 0.25
 
@@ -2531,7 +2531,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nVersion = 1;
         block.nTime    = 1375553018;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 73309767;
+        block.nNonce   = 0;
 
  	   if (true  && (block.GetHash() != hashGenesisBlock)) {
 	 
@@ -2557,7 +2557,7 @@ bool LoadBlockIndex(bool fAllowNew)
         printf("block.nTime = %u \n", block.nTime);
         printf("block.nNonce = %u \n", block.nNonce);
 
-        assert(block.hashMerkleRoot == uint256("0xd0bd62cef0875cd27f44408ced9f4274c7a76183727e1847929860c31c8c026a"));
+        assert(block.hashMerkleRoot == uint256("0x"));
 
         assert(block.GetHash() == hashGenesisBlock);
 

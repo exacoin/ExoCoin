@@ -32,9 +32,9 @@ static const unsigned int MAX_ORPHAN_TRANSACTIONS = MAX_BLOCK_SIZE/100;
 static const unsigned int MAX_INV_SZ = 50000;
 static const int64 MIN_TX_FEE = 0.1 * CENT;
 static const int64 MIN_RELAY_TX_FEE = 0.1 * CENT;
-static const int64 MAX_MONEY = 47433600 * COIN;
-static const int64 MAX_MINT_PROOF_OF_WORK = 10 * COIN;
-static const int64 MAX_MINT_PROOF_OF_WORK_LEGACY = 10 * COIN;
+static const int64 MAX_MONEY = 16000000 * COIN;
+static const int64 MAX_MINT_PROOF_OF_WORK = 1000 * COIN;
+static const int64 MAX_MINT_PROOF_OF_WORK_LEGACY = 1000 * COIN;
 static const int64 MAX_MINT_PROOF_OF_STAKE = 1 * CENT;
 
 static const int64 MIN_TXOUT_AMOUNT = MIN_TX_FEE;
@@ -52,7 +52,7 @@ static const int fHaveUPnP = true;
 static const int fHaveUPnP = false;
 #endif
 
-static const uint256 hashGenesisBlockOfficial("0xb70be2c6d7f6dfbb7cc874a6009b14e267b0e0ecb2e725152dd785829216dadd");
+static const uint256 hashGenesisBlockOfficial("0x0000000a0f1cf77c6553983ec4f470625b76c18e8c8b9f34218f1aa8c7156817");
 static const uint256 hashGenesisBlockTestNet("0x");
 
 static const int64 nMaxClockDrift = 2 * 60 * 60;        // two hours
@@ -927,7 +927,7 @@ public:
     // ppcoin: entropy bit for stake modifier if chosen by modifier
     unsigned int GetStakeEntropyBit(unsigned int nHeight) const
     {
-        // Protocol switch to support p2pool at FehCoin block #9689
+        // Protocol switch to support p2pool at ExoCoin block #9689
         if (nHeight >= 9689 || fTestNet)
         {
             // Take last bit of block hash as entropy bit
@@ -936,7 +936,7 @@ public:
                 printf("GetStakeEntropyBit: nHeight=%u hashBlock=%s nEntropyBit=%u\n", nHeight, GetHash().ToString().c_str(), nEntropyBit);
             return nEntropyBit;
         }
-        // Before FehCoin block #9689 - old protocol
+        // Before ExoCoin block #9689 - old protocol
         uint160 hashSig = Hash160(vchBlockSig);
         if (fDebug && GetBoolArg("-printstakemodifier"))
             printf("GetStakeEntropyBit: hashSig=%s", hashSig.ToString().c_str());
