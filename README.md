@@ -1,4 +1,4 @@
 
-FehCoin
+ExoCoin.
 
-A Proof of Stake/Proof of Work coin. designed to be secure and more energy efficient.
+A crypto currency using Proof of Stake and Proof of work.
